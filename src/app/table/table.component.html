@@ -1,0 +1,47 @@
+
+<main>
+<div style="display: flex; justify-content: center;">
+  <img srcset="assets/white1195.png 1195w, 
+              assets/white898.png 998w,
+              assets/white484.png 484w" 
+src="assets/white898.png" alt="TexCare Finder Logo Banner">
+</div>
+<div *ngIf="!deleted" class="container mt-3">
+    <h3 class="m-3 dark-navy">View ALL your textile items!</h3>
+    <div class="table-responsive">
+      <table class="m-3 table table-striped table-hover table-bordered">
+        <thead class="text-center">
+          <tr>
+            <th scope="col">Actions</th>
+            <th scope="col">Category</th>
+            <th scope="col">Property</th>
+            <th scope="col">Washing Temperature</th>
+            <th scope="col">Ironing Level</th>
+            <th scope="col">Notes</th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let textile of textiles">
+            <td>
+              <a [routerLink]="['/textile', textile._id]"><span style='font-size: 1rem' class="bi bi-pencil-square px-5"></span></a>
+        
+              <span (click)="textile._id && delete(textile._id)" style='font-size: 1,5rem' class="bi bi-trash px-5"></span>
+            </td>
+            <td>{{ textile.category }}</td>
+            <td>{{ textile.feature }}</td>
+            <td>{{ textile.wash_temp }} degrees</td>
+            <td>{{ textile.iron_level }}</td>
+            <td>{{ textile.others }}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+      
+      
+    </div>
+  </div>
+  <div *ngIf="deleted" class=" container mt-3 ">
+    <h3>This textile item was successfully deleted!</h3>
+    <button type="button" class="btn btn-secondary" (click)="reload(false)">Return to the overview table</button>
+  </div>
+</main>

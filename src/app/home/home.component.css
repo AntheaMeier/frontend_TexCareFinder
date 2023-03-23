@@ -1,0 +1,17 @@
+main {
+    background-color: #3f72bd;
+    color: white;
+}
+
+.container .bold {
+    font-weight: bold;
+}
+
+.container p {
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+}
+
+.li{
+    color: white;
+}

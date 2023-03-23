@@ -1,0 +1,60 @@
+
+<div style="display: flex; justify-content: center;">
+  <img srcset="assets/lila1195.png 1195w, 
+            assets/lila898.png 998w,
+            assets/lila484.png 484w" 
+     src="assets/lila898.png" alt="TexCare Finder Logo Banner">
+</div>
+
+<main class="d-flex min-vh-100">
+  <fieldset class="container  mt-5">
+    <legend *ngIf="textile" class="mb-4">Update the textile: "{{ textile.category }} {{ textile.feature }}"
+    </legend>
+
+    <form [formGroup]="form" (ngSubmit)="update()">
+
+      <div class="mb-3 row">
+        <label class="col-2 col-form-label" style="font-weight: bold" for="category">Category*</label>
+        <div class="col-10">
+          <input type="text" class="form-control" id="category" placeholder="Category"
+            formControlName="categoryControl" required (blur)="onBlurCategory()" />
+          <div *ngIf="showCategoryWarning" class="alert alert-danger">
+            {{form.get('categoryControl')?.errors?.['required'] && 'Please provide a category such as shirt, trousers etc.' || ERROR_MESSAGE}}
+          </div>
+        </div>
+      </div>
+        <div class="mb-3 row">
+          <label class="col-2 col-form-label" style="font-weight: bold" for="feature">Property</label>
+          <div class="col-10">
+            <input type="text" class="col-10 form-control" id="feature" placeholder="Property"
+            formControlName="featureControl" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-2 col-form-label" style="font-weight: bold" for="wash_temp">Wash temperature</label>
+          <div class="col-10">
+            <input type="wash_temp" class="col-10 form-control" id="wash_temp" placeholder="Wash temperature" formControlName="wash_tempControl" />
+          </div>
+        </div>
+  
+  <div class="mb-3 row">
+          <label class="col-2 col-form-label" style="font-weight: bold" for="iron_level">Iron level</label>
+          <div class="col-10">
+            <input type="iron_level" class="col-10 form-control" id="iron_level" placeholder="Iron level" formControlName="iron_levelControl" />
+          </div>
+        </div>
+  
+        <div class="mb-3 row">
+          <label class="col-2 col-form-label" style="font-weight: bold" for="others">Others</label>
+          <div class="col-10">
+            <input type="text" class="col-10 form-control" id="others" placeholder="Others" formControlName="othersControl" />
+          </div>
+        </div>
+        <div class="row ">
+          <button type="submit" class="col-5 btn btn-secondary">Update</button>
+          <div class="col-2"></div>
+          <button type="button" class="col-5 btn btn-secondary" (click)="cancel() ">Cancel</button>
+        </div>
+      </form>
+    </fieldset>
+  </main>
