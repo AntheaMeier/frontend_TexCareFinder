@@ -36,7 +36,7 @@ The app has three sections:
 
 
 # Why this app?
-Database entries that you manage with this app are care instructions of textiles. This way you can remove labels from your clothes to prevent skin irritation and safely store all the information you need and prevent it from being washed out.
+Database entries that you can manage with this app are care instruction infos of textiles. This way you can remove labels from your clothes to prevent skin irritation and safely store all the information you need and prevent it from being washed out.
 
 
 # Technical background and CRUD functionalities
