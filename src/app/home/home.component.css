@@ -1,4 +1,4 @@
-main {
+/* main {
     background-color: #3f72bd;
     color: white;
 }
@@ -8,10 +8,44 @@ main {
 }
 
 .container p {
-    margin: 0.5em 0;
+    margin: 1em 0;
     padding: 0.5em 0;
 }
 
 .li{
+    color: white;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.custom-container {
+    background-color: #3f72bd;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 5rem; /* Adjust the top padding value to create the desired gap */
+}
+
+.content {
+    max-width: 1200px; /* Adjust this value to limit the content width */
+}
+
+.bold {
+    font-weight: bold;
+}
+
+p {
+    margin: 1em 0;
+    padding: 0.5em 0;
+}
+
+.li {
     color: white;
 }
