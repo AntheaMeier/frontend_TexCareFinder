@@ -31,7 +31,7 @@ to start the backend.
 
 The app has three sections:
 1) Home: information about what you can do.
-![TexCare Finder Screenshot](https://github.com/AntheaMeier/frontend_TexCareFinder/raw/main/assets/SC_home)
+![Screenshot of Home](https://github.com/AntheaMeier/frontend_TexCareFinder/raw/main/assets/SC_home.png)
 2) All: Here you can get an overview of all your database entries, delete them or switch to edit mode by going to the details page where you can update a specific database entry.
 3) New: Here you can use a form to create a new database entry.
 
